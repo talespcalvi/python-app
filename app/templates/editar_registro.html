@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p>Editar registro</p>
+
+{% if origem == 'index' %}
+  <a href="{{ url_for('index') }}">← Voltar</a>
+{% elif origem == 'registros' %}
+  <a href="{{ url_for('registros') }}">← Voltar</a>
+{% else %}
+  <a href="{{ url_for('index') }}">← Voltar</a> <!-- fallback -->
+{% endif %}
+
+
+<h2>UV</h2>
+
+<h3>REGISTRO 1</h3>
+
+<table class="table-registro">
+    <tr>
+        <td><button>FREQ</button></td>
+        <td><button>DATA</button></td>
+    </tr>
+    <tr>
+        <td><button>HARD</button></td>
+        <td><button>LOCAL</button></td>
+    </tr>
+    <tr>
+        <td><button>DOC</button></td>
+        <td><button></button></td>
+    </tr>
+</table>
+
+{% endblock %}
